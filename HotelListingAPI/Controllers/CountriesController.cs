@@ -132,10 +132,10 @@ namespace HotelListingAPI.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteCountry(int id)
         {
-            if (_countriesRepository.GetAsync(id) == null)
-            {
-                return NotFound();
-            }
+            //if (_countriesRepository.GetAsync(id) == null)
+            //{
+            //    return NotFound();
+            //}
             var country = await _countriesRepository.GetAsync(id);
             if (country == null)
             {
