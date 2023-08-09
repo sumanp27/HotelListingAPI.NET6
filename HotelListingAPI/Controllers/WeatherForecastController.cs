@@ -3,7 +3,8 @@ using Microsoft.AspNetCore.Mvc;
 namespace HotelListingAPI.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("v{version:apiversion}[controller]")]
+    [ApiVersion("3.0")]
     public class WeatherForecastController : ControllerBase
     {
         private static readonly string[] Summaries = new[]
